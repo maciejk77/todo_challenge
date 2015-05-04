@@ -1,0 +1,22 @@
+{
+  "name": "todo_challenge",
+  "version": "0.0.0",
+  "homepage": "https://github.com/maciejk77/todo_challenge",
+  "authors": [
+    "Maciej Kurek <maciejk77@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.15",
+    "angular-resource": "~1.3.15"
+  }
+}
