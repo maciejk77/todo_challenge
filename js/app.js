@@ -17,11 +17,11 @@ function ToDoController($scope) {
     $scope.formToDoText = '';
   };
     
-  // $scope.clearCompleted = function () {
-  //     $scope.tasks = _.filter($scope.tasks, function(todo){
-  //         return !todo.completed;
-  //     });
-  // };
+  $scope.clearAll = function () {
+      $scope.tasks = _.filter($scope.tasks, function(todo){
+          return todo.completed;
+      });
+  };
 
 }
 
