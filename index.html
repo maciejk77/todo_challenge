@@ -12,21 +12,22 @@
 
   <body ng-controller="ToDoController">
     <br />
-    <div>
-    <input type="text"><br /><br />
+    <form>
+    <input type="text" ng-model="formToDoText" placeholder="Add a ToDo here...">&nbsp;
+    <button class="btn btn-warning btn-sm" role="button" ng-click="addToDo()">Add</button>
+    <br /><br />
       <table>
-        <tr ng-repeat="toDoItem in tasks">
+        <tr ng-repeat="task in tasks">
           <td><input type="checkbox" /></td>
-          <td>{{ toDoItem }}</td> 
+          <td>&nbsp; {{ task.todo }}</td> 
         </tr>
       </table><br/>
-      <p> {{ tasks.length }} items left</p>
-    </div>
+      <p> {{ getToDoCount() }} items left</p>
+    </form>
     <br />
-      <a href="#/home.html" class="btn btn-primary btn-sm" role="button">All</a>
-      <a href="#/views/active.html" class="btn btn-primary btn-sm" role="button">Active</a>
-      <a href="#/views/active.html" class="btn btn-primary btn-sm" role="button">Complete</a>
-      <a href="#/views/active.html" class="btn btn-primary btn-sm" role="button">Clear All</a>
+      <button class="btn btn-info btn-sm" role="button">Active</button>
+      <button class="btn btn-success btn-sm" role="button">Complete</button>
+      <button class="btn btn-danger btn-sm" role="button" ng-click="clearAll()">Clear All</button>
   </body>
 </html>
 
